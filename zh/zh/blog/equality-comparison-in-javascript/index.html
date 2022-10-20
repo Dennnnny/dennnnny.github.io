@@ -1,0 +1,198 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 4.21.1"/><meta name="description" content="Stay hungry, stay foolish" data-gatsby-head="true"/><style data-href="/styles.78d663b2dad8e0638f0f.css" data-identity="gatsby-global-css">a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{border:0;font-size:100%;font:inherit;margin:0;padding:0;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}table{border-collapse:collapse;border-spacing:0}</style><title data-gatsby-head="true">Dennnnny.io | Javascript怎麼做比較的</title><link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 100 100&#x27;&gt;&lt;text y=&#x27;0.9em&#x27; font-size=&#x27;90&#x27;&gt;☀️&lt;/text&gt;&lt;/svg&gt;" data-gatsby-head="true"/><style data-styled="" data-styled-version="5.3.5">.gFlESX{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));padding:32px 16px;}/*!sc*/
+.gFlESX .post-title{font-size:32px;font-weight:800;grid-column-start:3;grid-column:1/-1;}/*!sc*/
+.gFlESX .post-date{grid-column:1/-1;margin-top:8px;}/*!sc*/
+.gFlESX img{grid-column:1/-1;width:100%;height:200px;object-fit:cover;margin-top:24px;border-radius:16px;}/*!sc*/
+.gFlESX .post-content{grid-column:1/-1;-webkit-backdrop-filter:blur(15px);backdrop-filter:blur(15px);}/*!sc*/
+.gFlESX .post-content > *{margin-top:24px;}/*!sc*/
+.gFlESX .post-content h1,.gFlESX .post-content h2,.gFlESX .post-content h3,.gFlESX .post-content h4,.gFlESX .post-content h5,.gFlESX .post-content h6{font-weight:600;}/*!sc*/
+.gFlESX .post-content h1{font-size:24px;position:relative;width:-webkit-fit-content;width:-moz-fit-content;width:fit-content;z-index:0;}/*!sc*/
+.gFlESX .post-content h1::after{content:"";width:100%;height:30%;position:absolute;bottom:0px;left:0px;background-image:linear-gradient( to left,#7928ca99,#ff008099 );z-index:-1;-webkit-transform:rotateZ(-1deg);-ms-transform:rotateZ(-1deg);transform:rotateZ(-1deg);}/*!sc*/
+.gFlESX .post-content h2{font-size:24px;}/*!sc*/
+.gFlESX .post-content h3{font-size:22px;}/*!sc*/
+.gFlESX .post-content p{line-height:150%;font-size:16px;}/*!sc*/
+.gFlESX .post-content p > code{border-radius:5px;padding:4px 12px;margin:4px 0;display:inline-block;}/*!sc*/
+.gFlESX .post-content ul > code{border-radius:5px;padding:4px 12px;margin:4px 0;display:inline-block;}/*!sc*/
+.gFlESX .post-content blockquote{border:none;border-radius:0.5rem;font-style:italic;font-weight:400;margin:2.5rem 0;padding:1rem;overflow-wrap:anywhere;}/*!sc*/
+.gFlESX .post-content pre{background-color:#011627;border-radius:8px;font-size:1em;font-weight:400;line-height:1.7142857;overflow-x:auto;padding:1.5rem;}/*!sc*/
+.gFlESX .post-content a{-webkit-text-decoration:none;text-decoration:none;color:#60bbd0;margin:0 4px;}/*!sc*/
+@media (min-width:768px){.gFlESX .post-content h1{font-size:28px;}.gFlESX .post-content h2{font-size:24px;}.gFlESX .post-content p{line-height:150%;font-size:18px;}}/*!sc*/
+.gFlESX .post-comments{border-top:0.5px solid;margin-top:32px;padding-top:16px;grid-column:1/-1;}/*!sc*/
+.gFlESX .post-image-source{margin-top:4px;grid-column:1/-1;font-size:14px;font-style:italic;}/*!sc*/
+@media (min-width:768px){.gFlESX .post-title{grid-column:2/-2;font-size:36px;}.gFlESX .post-date{grid-column:2/-2;}.gFlESX img{grid-column:2/-2;height:300px;}.gFlESX .post-content{grid-column:2/-2;}.gFlESX .post-comments{margin-top:64px;padding-top:32px;grid-column:2/-2;}.gFlESX .post-image-source{grid-column:2/-2;}}/*!sc*/
+@media (min-width:1024px){.gFlESX .post-title{grid-column:3/-3;font-size:40px;}.gFlESX .post-date{grid-column:3/-3;}.gFlESX img{grid-column:3/-3;height:400px;}.gFlESX .post-content{grid-column:3/-3;}.gFlESX .post-comments{grid-column:3/-3;}.gFlESX .post-image-source{grid-column:3/-3;}}/*!sc*/
+data-styled.g1[id="blog__Layout-sc-1amkdk2-0"]{content:"gFlESX,"}/*!sc*/
+</style><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="sitemap" type="application/xml" href="/sitemap/sitemap-index.xml"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="blog__Layout-sc-1amkdk2-0 gFlESX"><div class="post-title">Javascript怎麼做比較的</div><div class="post-date">2022-10-19</div><img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?fit=crop&amp;w=1000&amp;q=80" alt="Javascript怎麼做比較的"/><span class="post-image-source">圖片來源 unsplash<!-- --> <!-- --></span><div class="post-content"><h1>Javascript 裡的比較</h1>
+<p>最近重新看了一下 js 的一些基礎<br>
+然後對於這個 比較 才是更明白了一些</p>
+<p>說到等於 『 = 』 這個符號<br>
+在 js 裡有兩種用法</p>
+<p>第一種是賦值給變數<br>
+例如 let x = 1</p>
+<p>第二種就是比較<br>
+比較又分兩種<br>
+比較嚴謹的 === 與不嚴謹的 ==<br>
+兩者的差異是</p>
+<p>在嚴謹模式 === 下<br>
+比較值兩邊要 同時符合 相等的值與量同的型別 才會回傳 true<br>
+否則就是 false</p>
+<p>而在 不那麼嚴謹的比較之下 ==<br>
+js 會偷偷幫你做型別的轉換<br>
+然後再拿來做比較<br>
+所以有時候會出現令人費解的比較結果
+例如以下範例</p>
+<pre class="grvsc-container abyss" data-language="js" data-index="0"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">[</span><span class="mtk4">0</span><span class="mtk1">] </span><span class="mtk7">==</span><span class="mtk1"> </span><span class="mtk11">&quot;&quot;</span><span class="mtk1">; </span><span class="mtk3">//false</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">[</span><span class="mtk4">0</span><span class="mtk1">] </span><span class="mtk7">==</span><span class="mtk1"> </span><span class="mtk4">0</span><span class="mtk1">; </span><span class="mtk3">//true</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">[</span><span class="mtk11">&quot;&quot;</span><span class="mtk1">] </span><span class="mtk7">==</span><span class="mtk1"> </span><span class="mtk11">&quot;&quot;</span><span class="mtk1">; </span><span class="mtk3">//true</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">[</span><span class="mtk11">&quot;&quot;</span><span class="mtk1">] </span><span class="mtk7">==</span><span class="mtk1"> </span><span class="mtk4">0</span><span class="mtk1">; </span><span class="mtk3">//true;</span></span></span></code></pre>
+<p>怎麼會 [0] == "" 是錯的 而其他的又都是對的呢 ！！<br>
+當知道原因後 就沒那麼難理解了</p>
+<p>Js 偷偷在背後幫你做的型別轉換是有規則的<br>
+根據 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Equality">MDN 的解釋</a><br>
+簡單來說（粗略的說明，詳細請參考 MDN）
+Js 會想辦法把兩邊 變成同樣的型別來做比較</p>
+<p>規則是</p>
+<ul>
+<li>
+<p>在相同型別下 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Equality#description">參考這裡</a></p>
+</li>
+<li>
+<p>非相同型別比較</p>
+</li>
+</ul>
+<ol>
+<li>
+<p>物件型別 vs 基本型別
+=> 把物件轉成基本型別<br>
+=> 做法是 依序試試看兩種方式 : valueOf() / toString()
+=> 如果 valueOf 沒有拿到基本型別的值 ， 則會使用 toString() 的方式轉換成 string 來比較</p>
+</li>
+<li>
+<p>基本型別 - Boolean vs 基本型別 - 其他(String, Number)<br>
+=> 把 Boolean 轉成 Number (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion">參考</a>)</p>
+</li>
+<li>
+<p>基本型別 - String vs 基本型別 - Number
+=> 把 String 轉成 Number (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion">參考</a>)</p>
+</li>
+</ol>
+<p>轉化完後就可以進行比較了<br>
+以上面的例子來看</p>
+<pre class="grvsc-container abyss" data-language="js" data-index="1"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">//1.</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">[</span><span class="mtk4">0</span><span class="mtk1">] </span><span class="mtk7">==</span><span class="mtk1"> </span><span class="mtk11">&quot;&quot;</span><span class="mtk1">; </span><span class="mtk3">//object vs string</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// 因為 [0].valueOf() 還是[0] 所以會使用toString()</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk11">&quot;[0]&quot;</span><span class="mtk1"> </span><span class="mtk7">==</span><span class="mtk1"> </span><span class="mtk11">&quot;&quot;</span><span class="mtk1">;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// 然後比較出來等於 false</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">//2.</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">[</span><span class="mtk4">0</span><span class="mtk1">] </span><span class="mtk7">==</span><span class="mtk1"> </span><span class="mtk4">0</span><span class="mtk1">; </span><span class="mtk3">// object cs number</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// 同上</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk11">&quot;[0]&quot;</span><span class="mtk1"> </span><span class="mtk7">==</span><span class="mtk1"> </span><span class="mtk4">0</span><span class="mtk1">;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// 接著做字串轉成數字： &quot;[0]&quot; -&gt; NaN,</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk4">NaN</span><span class="mtk1"> </span><span class="mtk7">==</span><span class="mtk1"> </span><span class="mtk4">0</span><span class="mtk1">; </span><span class="mtk3">// 得到結果 false</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// 其他的也可以依照這個邏輯來解答</span></span></span></code></pre>
+<p>以上是我再次看了網路上前輩的<a href="https://ithelp.ithome.com.tw/articles/10191254">鐵人賽文章</a>之後<br>
+重新獲得的知識<br>
+只能說以前的自己其實也沒有很理解 js<br>
+希望自己可以越來越好</p>
+<p>以上是今天的分享 👋</p>
+<style class="grvsc-styles">
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line > * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: ' ';
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting > .grvsc-code > .grvsc-line::before {
+    content: ' ';
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+  .abyss { background-color: #000c18; }
+  .abyss .mtk1 { color: #6688CC; }
+  .abyss .mtk4 { color: #F280D0; }
+  .abyss .mtk7 { color: #225588; }
+  .abyss .mtk11 { color: #22AA44; }
+  .abyss .mtk3 { color: #384887; }
+  .abyss .grvsc-line-highlighted::before {
+    background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
+  }
+</style></div><div class="post-comments"><div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/zh/zh/blog/equality-comparison-in-javascript";window.___webpackCompilationHash="ecedd3b0aba30d8bf4bc";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-257d5246b79bc8b7e1cf.js"],"app":["/app-8ed3240d256fd82845ad.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-ac7ccba2b0256520fe17.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-625dc32054298d1f2717.js"],"component---src-pages-blog-tsx":["/component---src-pages-blog-tsx-acd0428f33adcb324fac.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-55c5dd98663b612e23d3.js"],"component---src-pages-project-tsx":["/component---src-pages-project-tsx-51247f1b2ba6ea73ab25.js"],"component---src-templates-blog-index-tsx":["/component---src-templates-blog-index-tsx-4e0e1a0f7a26c4fec511.js"]};/*]]>*/</script><script src="/polyfill-257d5246b79bc8b7e1cf.js" nomodule=""></script><script src="/app-8ed3240d256fd82845ad.js" async=""></script><script src="/252f366e-cf461010a76e5cd78910.js" async=""></script><script src="/framework-79ea9e3d1f4a7909a4cf.js" async=""></script><script src="/webpack-runtime-dbff1deea834c5583129.js" async=""></script></body></html>
