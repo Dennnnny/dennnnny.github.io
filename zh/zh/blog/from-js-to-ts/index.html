@@ -1,9 +1,283 @@
-<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 4.21.1"/><meta name="description" content="Stay hungry, stay foolish" data-gatsby-head="true"/><style data-href="/styles.78d663b2dad8e0638f0f.css" data-identity="gatsby-global-css">a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{border:0;font-size:100%;font:inherit;margin:0;padding:0;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}table{border-collapse:collapse;border-spacing:0}</style><title data-gatsby-head="true">Dennnnny.io | 從Js寫到Ts</title><link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 100 100&#x27;&gt;&lt;text y=&#x27;0.9em&#x27; font-size=&#x27;90&#x27;&gt;☀️&lt;/text&gt;&lt;/svg&gt;" data-gatsby-head="true"/><style data-styled="" data-styled-version="5.3.5">.fKGnwu{width:100%;height:100vh;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-transition:all 1s ease-in-out;transition:all 1s ease-in-out;background:#1d1d1e;}/*!sc*/
-.fKGnwu .loading_logo{width:50px;height:50px;border-radius:50%;border:solid #fffdfa;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-animation:spinning 1s infinite;animation:spinning 1s infinite;-webkit-animation-fill-mode:both;animation-fill-mode:both;}/*!sc*/
-.fKGnwu span{color:#fffdfa;width:50%;height:100%;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:2.5rem;font-weight:600;}/*!sc*/
-.fKGnwu span:first-child{text-indent:10px;-webkit-transition:all 1s ease-in;transition:all 1s ease-in;}/*!sc*/
-.fKGnwu span:last-child{text-indent:-10px;-webkit-transform:rotate(-30deg);-ms-transform:rotate(-30deg);transform:rotate(-30deg);-webkit-transition:all 1s ease-in;transition:all 1s ease-in;}/*!sc*/
-@-webkit-keyframes spinning{0%{-webkit-transform:rotateZ(0);-ms-transform:rotateZ(0);transform:rotateZ(0);}100%{-webkit-transform:rotateY(360deg);-ms-transform:rotateY(360deg);transform:rotateY(360deg);}}/*!sc*/
-@keyframes spinning{0%{-webkit-transform:rotateZ(0);-ms-transform:rotateZ(0);transform:rotateZ(0);}100%{-webkit-transform:rotateY(360deg);-ms-transform:rotateY(360deg);transform:rotateY(360deg);}}/*!sc*/
-data-styled.g10[id="ClientSideLoading__LoadingLayout-sc-ztqaqq-0"]{content:"fKGnwu,"}/*!sc*/
-</style><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="sitemap" type="application/xml" href="/sitemap/sitemap-index.xml"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="ClientSideLoading__LoadingLayout-sc-ztqaqq-0 fKGnwu"><div class="loading_logo"><span>D</span><span>C</span></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/zh/zh/blog/from-js-to-ts";window.___webpackCompilationHash="235e542a288ff13584f3";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-257d5246b79bc8b7e1cf.js"],"app":["/app-7e6ac8c9400865b64738.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-ac7ccba2b0256520fe17.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-625dc32054298d1f2717.js"],"component---src-pages-blog-tsx":["/component---src-pages-blog-tsx-018557c496dc3dfa3815.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-55c5dd98663b612e23d3.js"],"component---src-pages-project-tsx":["/component---src-pages-project-tsx-500b79ec77d051a8df97.js"],"component---src-templates-blog-index-tsx":["/component---src-templates-blog-index-tsx-783c9e363b263935dda7.js"]};/*]]>*/</script><script src="/polyfill-257d5246b79bc8b7e1cf.js" nomodule=""></script><script src="/app-7e6ac8c9400865b64738.js" async=""></script><script src="/252f366e-cf461010a76e5cd78910.js" async=""></script><script src="/framework-79ea9e3d1f4a7909a4cf.js" async=""></script><script src="/webpack-runtime-0c7cf5ac32b7250ca233.js" async=""></script></body></html>
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 4.21.1"/><meta name="description" content="Stay hungry, stay foolish" data-gatsby-head="true"/><style data-href="/styles.78d663b2dad8e0638f0f.css" data-identity="gatsby-global-css">a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{border:0;font-size:100%;font:inherit;margin:0;padding:0;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}table{border-collapse:collapse;border-spacing:0}</style><title data-gatsby-head="true">Dennnnny.io | 從Js寫到Ts</title><link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 100 100&#x27;&gt;&lt;text y=&#x27;0.9em&#x27; font-size=&#x27;90&#x27;&gt;☀️&lt;/text&gt;&lt;/svg&gt;" data-gatsby-head="true"/><style data-styled="" data-styled-version="5.3.5">.dFFPFy button.language_switch_btn,.dFFPFy ul.language_menu{display:none;}/*!sc*/
+.dFFPFy div.mobile_switchLanguage{width:100px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}/*!sc*/
+.dFFPFy div.mobile_switchLanguage > button.mobile_switchLanguage_btn{width:50px;outline:none;border:1px solid #fffdfa55;padding:5px;opacity:0.5;color:#fffdfa;background-color:#1d1d1e;border-collapse:collapse;-webkit-filter:brightness(0.9);filter:brightness(0.9);-webkit-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;}/*!sc*/
+.dFFPFy div.mobile_switchLanguage > button.mobile_switchLanguage_btn.active{opacity:1;font-weight:900;background-color:#1d1d1e;-webkit-filter:brightness(1.2);filter:brightness(1.2);}/*!sc*/
+.dFFPFy div.mobile_switchLanguage > button.mobile_switchLanguage_btn:first-child{border-radius:10px 0 0 10px;border-right:none;}/*!sc*/
+.dFFPFy div.mobile_switchLanguage > button.mobile_switchLanguage_btn:last-child{border-radius:0 10px 10px 0;}/*!sc*/
+@media (min-width:768px){.dFFPFy{position:absolute;right:95px;}.dFFPFy div.mobile_switchLanguage{display:none;}.dFFPFy button.language_switch_btn{display:block;border:none;padding:4px;color:#fffdfa;background:#1d1d1e;border:2px solid #9e9e9e;border-radius:15px;height:28px;width:44px;line-height:100%;}.dFFPFy button.language_switch_btn:hover{cursor:pointer;}.dFFPFy ul.language_menu{display:block;position:absolute;list-style:none;color:#fffdfa;background:transparent;-webkit-filter:blur(10);filter:blur(10);border-color:#1d1d1e;width:100%;font-size:0.8rem;}.dFFPFy ul.language_menu li{width:100%;line-height:150%;text-align:center;-webkit-transition:all 0.2s ease-in-out;transition:all 0.2s ease-in-out;}.dFFPFy ul.language_menu li:hover{border-bottom:2px solid #9e9e9e;cursor:pointer;}}/*!sc*/
+data-styled.g1[id="Locale__LocaleLayout-sc-tvn2yy-0"]{content:"dFFPFy,"}/*!sc*/
+.iFvYGl input#switchTheme,.iFvYGl input#mobile_switchTheme,.iFvYGl label.switchTheme,.iFvYGl .background{display:none;}/*!sc*/
+.iFvYGl div.mobile_switchTheme{width:100px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}/*!sc*/
+.iFvYGl div.mobile_switchTheme > button.mobile_switchTheme_btn{width:50px;outline:none;border:1px solid #fffdfa55;padding:5px;opacity:0.5;color:#fffdfa;background-color:#1d1d1e;border-collapse:collapse;-webkit-filter:brightness(0.9);filter:brightness(0.9);-webkit-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;}/*!sc*/
+.iFvYGl div.mobile_switchTheme > button.mobile_switchTheme_btn.active{opacity:1;font-weight:900;background-color:#1d1d1e;-webkit-filter:brightness(1.2);filter:brightness(1.2);}/*!sc*/
+.iFvYGl div.mobile_switchTheme > button.mobile_switchTheme_btn:first-child{border-radius:10px 0 0 10px;border-right:none;}/*!sc*/
+.iFvYGl div.mobile_switchTheme > button.mobile_switchTheme_btn:last-child{border-radius:0 10px 10px 0;}/*!sc*/
+@media (min-width:768px){.iFvYGl{position:absolute;right:200px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}.iFvYGl div.mobile_switchTheme{display:none;}.iFvYGl input{display:none;}.iFvYGl label.switchTheme{display:block;position:absolute;width:40px;height:24px;border-radius:15px;box-sizing:border-box;z-index:2;overflow:hidden;border:2px solid #9e9e9e;box-sizing:content-box;}.iFvYGl label.switchTheme:hover{cursor:pointer;}.iFvYGl label.switchTheme span{display:block;position:absolute;top:2px;left:18px;width:20px;height:20px;border-radius:50%;box-sizing:border-box;-webkit-transition:all ease-in-out 0.3s;transition:all ease-in-out 0.3s;color:#fff;background-color:#fff;border:2px solid #e8e8ea;}.iFvYGl label.switchTheme span:before{content:".";position:absolute;top:-8px;left:0px;color:#e8e8eaaa;-webkit-transform:scale(1.5);-ms-transform:scale(1.5);transform:scale(1.5);}.iFvYGl label.switchTheme span:after{content:".";position:absolute;top:-16px;left:3px;color:#e8e8ea;-webkit-transform:scale(2.2);-ms-transform:scale(2.2);transform:scale(2.2);}.iFvYGl .background{display:block;background:#343434;width:44px;position:absolute;height:24px;z-index:1;border-radius:15px;}.iFvYGl .background:before{content:".";position:absolute;top:-3px;left:4px;color:#fffdfa;}.iFvYGl .background:after{content:".";position:absolute;top:4px;left:10px;color:#fffdfa;}}/*!sc*/
+data-styled.g2[id="SwitchTheme__SwitchThemeLayout-sc-sxk3i8-0"]{content:"iFvYGl,"}/*!sc*/
+.jQSXhZ{padding:4px 12px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;box-shadow:0px 0px 2px #cccccc;}/*!sc*/
+.jQSXhZ .mobile_right_area{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+.jQSXhZ .mobile_right_area .setting{margin-right:8px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:#fffdfa;}/*!sc*/
+.jQSXhZ label.hamburger_menu{width:30px;height:30px;box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}/*!sc*/
+.jQSXhZ .laptop_menu{display:none;}/*!sc*/
+.jQSXhZ .title{line-height:16px;font-size:16px;font-weight:900;white-space:pre;color:#fffdfa;-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+.jQSXhZ .title:hover{cursor:pointer;}/*!sc*/
+.jQSXhZ input#hamburger_menu{display:none;}/*!sc*/
+.jQSXhZ .mobile_menu_hamburger{display:block;background-color:#fffdfa;position:relative;height:4px;width:30px;-webkit-transition:all 0.4s ease-in-out;transition:all 0.4s ease-in-out;-webkit-transition:all 0.4s ease-in-out;border-radius:2px;margin:3px 0;}/*!sc*/
+.jQSXhZ .line1{-webkit-transform-origin:0% 0%;-ms-transform-origin:0% 0%;transform-origin:0% 0%;-webkit-transition:all 0.4s ease-in-out;transition:all 0.4s ease-in-out;-webkit-transition:all 0.4s ease-in-out;}/*!sc*/
+.jQSXhZ .line2{-webkit-transition:all 0.2s ease-in-out;transition:all 0.2s ease-in-out;-webkit-transition:all 0.4s ease-in-out;}/*!sc*/
+.jQSXhZ .line3{-webkit-transform-origin:0% 100%;-ms-transform-origin:0% 100%;transform-origin:0% 100%;-webkit-transition:all 0.4s ease-in-out;transition:all 0.4s ease-in-out;-webkit-transition:all 0.4s ease-in-out;}/*!sc*/
+.jQSXhZ input#hamburger_menu:checked ~ * .line1{-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);}/*!sc*/
+.jQSXhZ input#hamburger_menu:checked ~ * .line2{-webkit-transform:scale(0);-ms-transform:scale(0);transform:scale(0);}/*!sc*/
+.jQSXhZ input#hamburger_menu:checked ~ * .line3{-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg);}/*!sc*/
+.jQSXhZ .mobile_menu_content{opacity:0;background:#1d1d1e;position:absolute;top:40px;left:0;height:calc(100vh - 40px);width:100%;-webkit-transition:0.3s;transition:0.3s;z-index:-1;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;padding:24px;}/*!sc*/
+.jQSXhZ .mobile_menu_content.active{opacity:0.9;z-index:2;}/*!sc*/
+.jQSXhZ .mobile_menu_content > a{margin:24px 0;color:#fffdfa;font-size:24px;-webkit-text-decoration:none;text-decoration:none;border-bottom:1px solid #fffdfabb;text-align:center;}/*!sc*/
+.jQSXhZ .mobile_menu_content > a:hover{margin-bottom:23px;border-bottom:2px solid #fffdfa;}/*!sc*/
+.jQSXhZ .mobile_menu_content > li{list-style:none;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-bottom:16px;}/*!sc*/
+.jQSXhZ ul{margin:0;padding:0;box-sizing:border-box;}/*!sc*/
+.jQSXhZ .right_area{display:none;}/*!sc*/
+@media (min-width:768px){.jQSXhZ{height:70px;padding:0px 12px;}.jQSXhZ .mobile_right_area,.jQSXhZ label.hamburger_menu,.jQSXhZ .mobile_menu_content{display:none;}.jQSXhZ .title,.jQSXhZ .contact{line-height:20px;font-size:20px;}.jQSXhZ .title:hover,.jQSXhZ .contact:hover{cursor:pointer;}.jQSXhZ .laptop_menu{display:block;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;list-style:none;font-size:20px;font-weight:900;white-space:pre;color:#fffdfa;}.jQSXhZ .laptop_menu > a{margin:2px 16px;-webkit-text-decoration:none;text-decoration:none;color:#fffdfa55;line-height:30px;}.jQSXhZ .laptop_menu > a:hover{cursor:pointer;color:#fffdfa;margin-bottom:0px;border-bottom:2px solid #fffdfa;-webkit-transition:0.3s;transition:0.3s;}.jQSXhZ .laptop_menu > a.activePath{color:#fffdfa;border-bottom:2px solid #fffdfa;margin-bottom:0px;}.jQSXhZ .right_area{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}}/*!sc*/
+data-styled.g3[id="Header__Layout-sc-17bc4j2-0"]{content:"jQSXhZ,"}/*!sc*/
+.bPNHLe{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;z-index:-10;box-sizing:border-box;}/*!sc*/
+data-styled.g9[id="Background__BackgroundLayout-sc-k04fyz-0"]{content:"bPNHLe,"}/*!sc*/
+body{background:#1d1d1e;}/*!sc*/
+data-styled.g11[id="sc-global-gQHrEz1"]{content:"sc-global-gQHrEz1,"}/*!sc*/
+.cpAIzd{background:#1d1d1e;color:#fffdfa;-webkit-transition:background 0.2s ease-in,color 0.2s ease-in;transition:background 0.2s ease-in,color 0.2s ease-in;z-index:1;position:relative;}/*!sc*/
+.cpAIzd .main-body{min-height:calc(100vh - 40px);box-sizing:border-box;}/*!sc*/
+.cpAIzd .main-body .flexCenter_layout{min-height:calc(100vh - 40px);display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+@media (min-width:768px){.cpAIzd .main-body{min-height:calc(100vh - 70px);}.cpAIzd .main-body .flexCenter_layout{min-height:calc(100vh - 70px);}}/*!sc*/
+data-styled.g12[id="Container__Layout-sc-1n395u7-0"]{content:"cpAIzd,"}/*!sc*/
+.hvuUYn{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));padding:32px 16px;color:#fffdfa;}/*!sc*/
+.hvuUYn .post-title{font-size:32px;font-weight:800;grid-column-start:3;grid-column:1/-1;}/*!sc*/
+.hvuUYn .post-date{grid-column:1/-1;color:#fffdfa55;margin-top:8px;}/*!sc*/
+.hvuUYn img{grid-column:1/-1;width:100%;height:200px;object-fit:cover;margin-top:24px;border-radius:16px;}/*!sc*/
+.hvuUYn .post-content{grid-column:1/-1;color:#fffdfabb;background-color:#1d1d1e;-webkit-backdrop-filter:blur(15px);backdrop-filter:blur(15px);}/*!sc*/
+.hvuUYn .post-content > *{margin-top:24px;}/*!sc*/
+.hvuUYn .post-content h1,.hvuUYn .post-content h2,.hvuUYn .post-content h3,.hvuUYn .post-content h4,.hvuUYn .post-content h5,.hvuUYn .post-content h6{color:#fffdfa;font-weight:600;}/*!sc*/
+.hvuUYn .post-content h1{font-size:24px;position:relative;width:-webkit-fit-content;width:-moz-fit-content;width:fit-content;z-index:0;}/*!sc*/
+.hvuUYn .post-content h1::after{content:"";width:100%;height:30%;position:absolute;bottom:0px;left:0px;background-image:linear-gradient( to left,#7928ca99,#ff008099 );z-index:-1;-webkit-transform:rotateZ(-1deg);-ms-transform:rotateZ(-1deg);transform:rotateZ(-1deg);}/*!sc*/
+.hvuUYn .post-content h2{font-size:24px;}/*!sc*/
+.hvuUYn .post-content h3{font-size:22px;}/*!sc*/
+.hvuUYn .post-content p{line-height:150%;font-size:18px;}/*!sc*/
+.hvuUYn .post-content p > code{color:#fffdfa;background:#fffdfa55;border-radius:5px;padding:4px 12px;margin:4px 0;display:inline-block;}/*!sc*/
+.hvuUYn .post-content ul > code{color:#fffdfa;background:#fffdfa55;border-radius:5px;padding:4px 12px;margin:4px 0;display:inline-block;}/*!sc*/
+.hvuUYn .post-content ul > li:not(.task-list-item){list-style:square;font-size:20px;font-weight:700;}/*!sc*/
+.hvuUYn .post-content blockquote{border:none;color:#fffdfa;font-style:italic;font-weight:400;margin:2.5rem 0;padding:0.5rem 1rem;overflow-wrap:anywhere;border-left:3px solid;}/*!sc*/
+.hvuUYn .post-content pre{background-color:#011627;border-radius:8px;font-size:1em;font-weight:400;line-height:1.7142857;overflow-x:auto;padding:1rem 0;}/*!sc*/
+.hvuUYn .post-content a{-webkit-text-decoration:none;text-decoration:none;color:#60bbd0;margin:0 4px;}/*!sc*/
+.hvuUYn .post-content summary{margin-bottom:8px;}/*!sc*/
+.hvuUYn .post-content strong{font-weight:900;}/*!sc*/
+@media (min-width:768px){.hvuUYn .post-content h1{font-size:28px;}.hvuUYn .post-content h2{font-size:24px;}.hvuUYn .post-content p{line-height:150%;font-size:20px;}.hvuUYn .post-content ul > li{font-size:22px;}}/*!sc*/
+.hvuUYn .post-comments{border-top:0.5px solid #fffdfa;margin-top:32px;padding-top:16px;grid-column:1/-1;}/*!sc*/
+.hvuUYn .post-image-source{margin-top:4px;grid-column:1/-1;font-size:14px;font-style:italic;color:#333333;}/*!sc*/
+@media (min-width:768px){.hvuUYn .post-title{grid-column:2/-2;font-size:36px;}.hvuUYn .post-date{grid-column:2/-2;}.hvuUYn img{grid-column:2/-2;height:300px;}.hvuUYn .post-content{grid-column:2/-2;}.hvuUYn .post-comments{margin-top:64px;padding-top:32px;grid-column:2/-2;}.hvuUYn .post-image-source{grid-column:2/-2;}}/*!sc*/
+@media (min-width:1024px){.hvuUYn .post-title{grid-column:3/-3;font-size:40px;}.hvuUYn .post-date{grid-column:3/-3;}.hvuUYn img{grid-column:3/-3;height:400px;}.hvuUYn .post-content{grid-column:3/-3;}.hvuUYn .post-comments{grid-column:3/-3;}.hvuUYn .post-image-source{grid-column:3/-3;}}/*!sc*/
+data-styled.g13[id="blog__Layout-sc-1amkdk2-0"]{content:"hvuUYn,"}/*!sc*/
+</style><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="sitemap" type="application/xml" href="/sitemap/sitemap-index.xml"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><!--$--><div class="Container__Layout-sc-1n395u7-0 cpAIzd"><div class="Header__Layout-sc-17bc4j2-0 jQSXhZ"><a class="title" hrefLang="zh" href="/zh/">Denny 
+Chang</a><ul class="laptop_menu"><a hrefLang="zh" href="/zh/blog">文章</a><a hrefLang="zh" href="/zh/about">關於我</a><a hrefLang="zh" href="/zh/project">作品</a></ul><div class="right_area"><div class="SwitchTheme__SwitchThemeLayout-sc-sxk3i8-0 iFvYGl"><input type="checkbox" id="switchTheme" checked=""/><label class="switchTheme" for="switchTheme"><span class="toggle"></span></label><div class="background"></div><div class="mobile_switchTheme"><button class="mobile_switchTheme_btn active">深色</button><button class="mobile_switchTheme_btn ">淺色</button></div></div><div class="Locale__LocaleLayout-sc-tvn2yy-0 dFFPFy"><button class="language_switch_btn">中文</button><div class="mobile_switchLanguage"><button class="mobile_switchLanguage_btn ">英文</button><button class="mobile_switchLanguage_btn active">中文</button></div></div><div class="contact laptop_menu" role="button" tabindex="0">聯絡我</div></div><input type="checkbox" id="hamburger_menu"/><div class="mobile_right_area"><div class="setting"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" font-size="32" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 00.12-.61l-1.92-3.32a.488.488 0 00-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 00-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58a.49.49 0 00-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"></path></svg></div><label class="hamburger_menu" for="hamburger_menu"><span class="mobile_menu_hamburger line1"></span><span class="mobile_menu_hamburger line2"></span><span class="mobile_menu_hamburger line3"></span></label></div><ul class="mobile_menu_content active"><li><p>主題模式<!-- -->：<!-- --></p><div class="SwitchTheme__SwitchThemeLayout-sc-sxk3i8-0 iFvYGl"><input type="checkbox" id="switchTheme" checked=""/><label class="switchTheme" for="switchTheme"><span class="toggle"></span></label><div class="background"></div><div class="mobile_switchTheme"><button class="mobile_switchTheme_btn active">深色</button><button class="mobile_switchTheme_btn ">淺色</button></div></div></li><li><p>選擇語言<!-- -->：<!-- --></p><div class="Locale__LocaleLayout-sc-tvn2yy-0 dFFPFy"><button class="language_switch_btn">中文</button><div class="mobile_switchLanguage"><button class="mobile_switchLanguage_btn ">英文</button><button class="mobile_switchLanguage_btn active">中文</button></div></div></li></ul></div><div class="main-body"><div class="blog__Layout-sc-1amkdk2-0 hvuUYn"><div class="post-title">從Js寫到Ts</div><div class="post-date">2022-10-17</div><img src="https://images.unsplash.com/photo-1621839673705-6617adf9e890?fit=crop&amp;w=1000&amp;q=80" alt="從Js寫到Ts"/><span class="post-image-source">圖片來源 unsplash<!-- --> <!-- --></span><div class="post-content"><h1>從 Javascript 到 typescript</h1>
+<p>原本的部落格專案是用 js 開發的<br>
+後來覺得 是時候加入一點新的東西了<br>
+其實之前也寫過一點點 ts 了<br>
+不過之前是最一開始就決定試著寫 ts<br>
+這次則是從原本的 js 轉過去</p>
+<p>總之就開始吧～<br>
+首先...
+把專案名稱是 .js 的檔案改成 .ts<br>
+.jsx 改成 .tsx<br>
+以及把 jsconfig.json 改成 tsconfig.json<br>
+就完成啦 🎉<br>
+因為 Gatsby 原生就支援了這兩種寫法<br>
+所以其實很方便～</p>
+<p>接著要改的東西有<br>
+<code>gastby-config.js -> gastby-config.ts</code>;</p>
+<details>
+<summary>gastby-config.ts</summary>
+<pre class="grvsc-container dark-default-dark" data-language="js" data-index="0"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">  </span><span class="mtk15">import</span><span class="mtk1"> { </span><span class="mtk12">GatsbyConfig</span><span class="mtk1"> } </span><span class="mtk15">from</span><span class="mtk1"> </span><span class="mtk8">&quot;gatsby&quot;</span><span class="mtk1">;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">  </span><span class="mtk15">import</span><span class="mtk1"> </span><span class="mtk4">*</span><span class="mtk1"> </span><span class="mtk15">as</span><span class="mtk1"> </span><span class="mtk12">dotenv</span><span class="mtk1"> </span><span class="mtk15">from</span><span class="mtk1"> </span><span class="mtk8">&quot;dotenv&quot;</span><span class="mtk1">;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">  </span><span class="mtk12">dotenv</span><span class="mtk1">.</span><span class="mtk11">config</span><span class="mtk1">({ </span><span class="mtk12">path:</span><span class="mtk1"> </span><span class="mtk12">__dirname</span><span class="mtk1"> + </span><span class="mtk8">&quot;/.env&quot;</span><span class="mtk1"> });</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">  </span><span class="mtk15">export</span><span class="mtk1"> </span><span class="mtk15">default</span><span class="mtk1"> {</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    </span><span class="mtk12">siteMetadata:</span><span class="mtk1"> {</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    </span><span class="mtk12">title:</span><span class="mtk1"> </span><span class="mtk3">// name your site,</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    </span><span class="mtk12">siteUrl</span><span class="mtk1">: </span><span class="mtk3">// your site&#39;s url,</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    },</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    </span><span class="mtk12">plugins:</span><span class="mtk1"> [</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      ...</span><span class="mtk12">all</span><span class="mtk1"> </span><span class="mtk12">plugins</span><span class="mtk1"> </span><span class="mtk12">you</span><span class="mtk1"> </span><span class="mtk12">needed</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    ],</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">  } </span><span class="mtk15">as</span><span class="mtk1"> </span><span class="mtk10">GatsbyConfig</span><span class="mtk1">;</span></span></span></code></pre>
+</details>
+</br>
+<p><code>gastby-node.js -> gastby-node.ts</code>;</p>
+<details>
+<summary>gastby-node.ts</summary>
+<pre class="grvsc-container dark-default-dark" data-language="js" data-index="1"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="mtk15">import</span><span class="mtk1"> { </span><span class="mtk12">GatsbyNode</span><span class="mtk1"> } </span><span class="mtk15">from</span><span class="mtk1"> </span><span class="mtk8">&quot;gatsby&quot;</span><span class="mtk1">;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk15">import</span><span class="mtk1"> </span><span class="mtk4">*</span><span class="mtk1"> </span><span class="mtk15">as</span><span class="mtk1"> </span><span class="mtk12">path</span><span class="mtk1"> </span><span class="mtk15">from</span><span class="mtk1"> </span><span class="mtk8">&quot;path&quot;</span><span class="mtk1">;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk15">export</span><span class="mtk1"> </span><span class="mtk4">const</span><span class="mtk1"> </span><span class="mtk11">onCreateWebpackConfig</span><span class="mtk1">: </span><span class="mtk10">GatsbyNode</span><span class="mtk1">[</span><span class="mtk8">&quot;onCreateWebpackConfig&quot;</span><span class="mtk1">] = ({</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">  </span><span class="mtk12">actions</span><span class="mtk1">,</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">}) </span><span class="mtk4">=&gt;</span><span class="mtk1"> {</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">  </span><span class="mtk12">actions</span><span class="mtk1">.</span><span class="mtk11">setWebpackConfig</span><span class="mtk1">({</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    </span><span class="mtk12">resolve:</span><span class="mtk1"> {</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk12">alias:</span><span class="mtk1"> {</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">        </span><span class="mtk8">&quot;@components&quot;</span><span class="mtk12">:</span><span class="mtk1"> </span><span class="mtk12">path</span><span class="mtk1">.</span><span class="mtk11">resolve</span><span class="mtk1">(</span><span class="mtk12">__dirname</span><span class="mtk1">, </span><span class="mtk8">&quot;src/components&quot;</span><span class="mtk1">),</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">        </span><span class="mtk8">&quot;@pages&quot;</span><span class="mtk12">:</span><span class="mtk1"> </span><span class="mtk12">path</span><span class="mtk1">.</span><span class="mtk11">resolve</span><span class="mtk1">(</span><span class="mtk12">__dirname</span><span class="mtk1">, </span><span class="mtk8">&quot;src/pages&quot;</span><span class="mtk1">),</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">        </span><span class="mtk8">&quot;@layouts&quot;</span><span class="mtk12">:</span><span class="mtk1"> </span><span class="mtk12">path</span><span class="mtk1">.</span><span class="mtk11">resolve</span><span class="mtk1">(</span><span class="mtk12">__dirname</span><span class="mtk1">, </span><span class="mtk8">&quot;src/layouts&quot;</span><span class="mtk1">),</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">        </span><span class="mtk8">&quot;@mock&quot;</span><span class="mtk12">:</span><span class="mtk1"> </span><span class="mtk12">path</span><span class="mtk1">.</span><span class="mtk11">resolve</span><span class="mtk1">(</span><span class="mtk12">__dirname</span><span class="mtk1">, </span><span class="mtk8">&quot;src/mock&quot;</span><span class="mtk1">),</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">        </span><span class="mtk8">&quot;@images&quot;</span><span class="mtk12">:</span><span class="mtk1"> </span><span class="mtk12">path</span><span class="mtk1">.</span><span class="mtk11">resolve</span><span class="mtk1">(</span><span class="mtk12">__dirname</span><span class="mtk1">, </span><span class="mtk8">&quot;src/images&quot;</span><span class="mtk1">),</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">        </span><span class="mtk8">&quot;@tool&quot;</span><span class="mtk12">:</span><span class="mtk1"> </span><span class="mtk12">path</span><span class="mtk1">.</span><span class="mtk11">resolve</span><span class="mtk1">(</span><span class="mtk12">__dirname</span><span class="mtk1">, </span><span class="mtk8">&quot;src/tool&quot;</span><span class="mtk1">),</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">        </span><span class="mtk8">&quot;@static&quot;</span><span class="mtk12">:</span><span class="mtk1"> </span><span class="mtk12">path</span><span class="mtk1">.</span><span class="mtk11">resolve</span><span class="mtk1">(</span><span class="mtk12">__dirname</span><span class="mtk1">, </span><span class="mtk8">&quot;static&quot;</span><span class="mtk1">),</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      },</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    },</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">  });</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">};</span></span></span></code></pre>
+<blockquote>
+<p>這個設定是讓我可以使用類似縮寫功能的<br>
+因為在專案裡有時候會要載入別的元件<br>
+這時候會寫 import "../../components/some-components"<br>
+這個縮寫讓他可以是 import "@components/some-components"<br>
+讓版面不會太亂</p>
+</blockquote>
+</details>
+</br>
+<p><code>gastby-browser.jsx -> gastby-browser.tsx</code>;</p>
+<details>
+<summary>gastby-browser.tsx</summary>
+<pre class="grvsc-container dark-default-dark" data-language="js" data-index="2"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="mtk15">import</span><span class="mtk1"> </span><span class="mtk4">*</span><span class="mtk1"> </span><span class="mtk15">as</span><span class="mtk1"> </span><span class="mtk12">React</span><span class="mtk1"> </span><span class="mtk15">from</span><span class="mtk1"> </span><span class="mtk8">&quot;react&quot;</span><span class="mtk1">;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk15">import</span><span class="mtk1"> </span><span class="mtk12">type</span><span class="mtk1"> { </span><span class="mtk12">GatsbyBrowser</span><span class="mtk1"> } </span><span class="mtk15">from</span><span class="mtk1"> </span><span class="mtk8">&quot;gatsby&quot;</span><span class="mtk1">;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk15">import</span><span class="mtk1"> </span><span class="mtk12">Layout</span><span class="mtk1"> </span><span class="mtk15">from</span><span class="mtk1"> </span><span class="mtk8">&quot;@components/layout&quot;</span><span class="mtk1">; </span><span class="mtk3">// 你可以加入自己設計的Layout Container</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk15">export</span><span class="mtk1"> </span><span class="mtk4">const</span><span class="mtk1"> </span><span class="mtk11">wrapPageElement</span><span class="mtk1">: </span><span class="mtk10">GatsbyBrowser</span><span class="mtk1">[</span><span class="mtk8">&quot;wrapPageElement&quot;</span><span class="mtk1">] = ({</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">  </span><span class="mtk12">element</span><span class="mtk1">,</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">}) </span><span class="mtk4">=&gt;</span><span class="mtk1"> {</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">  </span><span class="mtk15">return</span><span class="mtk1"> (</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    </span><span class="mtk17">&lt;</span><span class="mtk10">Layout</span><span class="mtk17">&gt;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk17">&lt;</span><span class="mtk4">h1</span><span class="mtk17">&gt;</span><span class="mtk1">Hello World</span><span class="mtk17">&lt;/</span><span class="mtk4">h1</span><span class="mtk17">&gt;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk4">{</span><span class="mtk12">element</span><span class="mtk4">}</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    </span><span class="mtk17">&lt;/</span><span class="mtk10">Layout</span><span class="mtk17">&gt;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">  );</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">};</span></span></span></code></pre>
+<blockquote>
+<p>這個目前先這樣就行了 這樣就讓 Layout 會在每一頁裡面呈現 不需要分別加進去<br>
+不過之後因為我在處理 i18n 的時候 遇到了一點問題 會改動到這裡的設置<br>
+先這樣 👋</p>
+</blockquote>
+</details>
+</br>
+<p>接著就可以進行元件裡的調整了<br>
+雖然 typescript 融入 react 貌似有很多種寫法（泛型之類的）<br>
+但因為我還沒有到很熟悉<br>
+所以暫時先改成一個元件配上 propTypes 的方式<br>
+以後更理解泛型的寫法 會再來補上來的 ～～～</p>
+<p>我大部分遇到的 type 寫法 多半直接參考官網的<br>
+我覺得官網的 handbook 寫的很好<br>
+關於 typescript 我會繼續努力學習的<br>
+之後應該也會慢慢的分享這些部分</p>
+<p>以上是今天的分享 👋</p>
+<style class="grvsc-styles">
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line > * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: ' ';
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting > .grvsc-code > .grvsc-line::before {
+    content: ' ';
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+  .dark-default-dark {
+    background-color: #1E1E1E;
+    color: #D4D4D4;
+  }
+  .dark-default-dark .mtk1 { color: #D4D4D4; }
+  .dark-default-dark .mtk15 { color: #C586C0; }
+  .dark-default-dark .mtk12 { color: #9CDCFE; }
+  .dark-default-dark .mtk8 { color: #CE9178; }
+  .dark-default-dark .mtk4 { color: #569CD6; }
+  .dark-default-dark .mtk11 { color: #DCDCAA; }
+  .dark-default-dark .mtk3 { color: #6A9955; }
+  .dark-default-dark .mtk10 { color: #4EC9B0; }
+  .dark-default-dark .mtk17 { color: #808080; }
+  .dark-default-dark .grvsc-line-highlighted::before {
+    background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
+  }
+</style></div><div class="post-comments"><div></div></div></div> <!-- --><div class="Background__BackgroundLayout-sc-k04fyz-0 bPNHLe"><canvas id="canvas"></canvas></div></div></div><!--/$--></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/zh/zh/blog/from-js-to-ts";window.___webpackCompilationHash="7e51bdd6de76b0e3c410";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-257d5246b79bc8b7e1cf.js"],"app":["/app-6df8e92519265addb264.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-e0057591bdc2e054d64b.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-8b9128b933c6e4949a66.js"],"component---src-pages-blog-tsx":["/component---src-pages-blog-tsx-3454d43c3289f87de495.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-e133e3c6a7e90eb72c14.js"],"component---src-pages-project-tsx":["/component---src-pages-project-tsx-0507f60c2e36049dad22.js"],"component---src-templates-blog-index-tsx":["/component---src-templates-blog-index-tsx-680419f6b574b0de6044.js"]};/*]]>*/</script><script src="/polyfill-257d5246b79bc8b7e1cf.js" nomodule=""></script><script src="/app-6df8e92519265addb264.js" async=""></script><script src="/252f366e-7c949a357c764d5e5053.js" async=""></script><script src="/76d8c668-77d54ac0b8dd77f76dc7.js" async=""></script><script src="/framework-79ea9e3d1f4a7909a4cf.js" async=""></script><script src="/webpack-runtime-716d15f93b65715ede41.js" async=""></script></body></html>
