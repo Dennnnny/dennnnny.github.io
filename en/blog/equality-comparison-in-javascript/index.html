@@ -149,6 +149,46 @@ Roughly speaking, javascript try to change two type the same by rules:</p>
 I find that I have a little bit more understanding about javascript<br>
 or, I think I just didn't know javascript well before<br>
 hope that I can do better, making some progress</p>
+<hr>
+<h3>postscript</h3>
+<p>I found something I miss before<br>
+for example:</p>
+<pre class="grvsc-container dark-default-dark" data-language="js" data-index="2"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// (1)</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk8">&quot;&quot;</span><span class="mtk1"> == </span><span class="mtk4">false</span><span class="mtk1">; </span><span class="mtk3">// true!</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// (2)</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk4">null</span><span class="mtk1"> == </span><span class="mtk4">undefined</span><span class="mtk1">; </span><span class="mtk3">// true!</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// =&gt; in mdn Equality (==) topic, description part2</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// &quot;If one of the operands is null or undefined, the other must also be null or undefined to return true. Otherwise return false.&quot;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// so the two comparison will be true</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// (3)</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// In &quot;&gt;&quot;,&quot;&lt;&quot;,&quot;&gt;=&quot;,&quot;&lt;=&quot; situations</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// null will transform to number, so it will be 0</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// undefined will turn into  NaN</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// so in above situations, always false</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// (4) so the following examples</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// null vs 0 !?</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk4">null</span><span class="mtk1"> &gt; </span><span class="mtk7">0</span><span class="mtk1">;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk4">null</span><span class="mtk1"> &lt; </span><span class="mtk7">0</span><span class="mtk1">;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk4">null</span><span class="mtk1"> == </span><span class="mtk7">0</span><span class="mtk1">;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk4">null</span><span class="mtk1"> &gt;= </span><span class="mtk7">0</span><span class="mtk1">;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// the answer are...</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// false!</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// false!</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// false!</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// true!!!!</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">/*</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">    because in &quot;&gt;&quot; &quot;&lt;&quot; comparison，it will compare in number type(or based on the values of the Unicode code points they contain of both string)</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">    so in first two examples, null will turns into 0 (undefined will turns into NaN)</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">    therefore, 0 &gt; 0, 0 &lt; 0 both false</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">    and 0 &gt;= 0 be true</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">    and ==，like I mentioned above</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">    null return true when the other is alos null or undefined, otherwise, false</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">/*</span></span></span></code></pre>
 <p>this is today's sharing 👋</p>
 <style class="grvsc-styles">
   .grvsc-container {
@@ -252,4 +292,4 @@ hope that I can do better, making some progress</p>
     background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
     box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
   }
-</style></div><div class="post-comments"><div></div></div></div> <!-- --><div class="Background__BackgroundLayout-sc-k04fyz-0 bPNHLe"><canvas id="canvas"></canvas></div></div></div><!--/$--></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/en/blog/equality-comparison-in-javascript";window.___webpackCompilationHash="d7c945070e4720f20bee";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-257d5246b79bc8b7e1cf.js"],"app":["/app-e22b4b9a3303ec24fcf6.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-8762159f06e220d4c376.js"],"component---src-pages-blog-tsx":["/component---src-pages-blog-tsx-ad062fbc7613a7280964.js"],"component---src-pages-change-log-tsx":["/component---src-pages-change-log-tsx-5850fa75e73b056d60c0.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-71f5f4cd1e67ad89a691.js"],"component---src-pages-project-tsx":["/component---src-pages-project-tsx-56677aeaed52feacf44f.js"],"component---src-templates-blog-index-tsx":["/component---src-templates-blog-index-tsx-dc99d7dc34d921e3a989.js"]};/*]]>*/</script><script src="/polyfill-257d5246b79bc8b7e1cf.js" nomodule=""></script><script src="/app-e22b4b9a3303ec24fcf6.js" async=""></script><script src="/252f366e-7c949a357c764d5e5053.js" async=""></script><script src="/76d8c668-fca7b5c41e560b3dac3b.js" async=""></script><script src="/framework-79ea9e3d1f4a7909a4cf.js" async=""></script><script src="/webpack-runtime-59dcc258b4edc9b2e90b.js" async=""></script></body></html>
+</style></div><div class="post-comments"><div></div></div></div> <!-- --><div class="Background__BackgroundLayout-sc-k04fyz-0 bPNHLe"><canvas id="canvas"></canvas></div></div></div><!--/$--></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/en/blog/equality-comparison-in-javascript";window.___webpackCompilationHash="fd22d00ae8473b35ba98";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-257d5246b79bc8b7e1cf.js"],"app":["/app-c851769155e23540dcb7.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-8762159f06e220d4c376.js"],"component---src-pages-blog-tsx":["/component---src-pages-blog-tsx-ad062fbc7613a7280964.js"],"component---src-pages-change-log-tsx":["/component---src-pages-change-log-tsx-5850fa75e73b056d60c0.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-71f5f4cd1e67ad89a691.js"],"component---src-pages-project-tsx":["/component---src-pages-project-tsx-56677aeaed52feacf44f.js"],"component---src-templates-blog-index-tsx":["/component---src-templates-blog-index-tsx-dc99d7dc34d921e3a989.js"]};/*]]>*/</script><script src="/polyfill-257d5246b79bc8b7e1cf.js" nomodule=""></script><script src="/app-c851769155e23540dcb7.js" async=""></script><script src="/252f366e-7c949a357c764d5e5053.js" async=""></script><script src="/76d8c668-fca7b5c41e560b3dac3b.js" async=""></script><script src="/framework-79ea9e3d1f4a7909a4cf.js" async=""></script><script src="/webpack-runtime-59dcc258b4edc9b2e90b.js" async=""></script></body></html>

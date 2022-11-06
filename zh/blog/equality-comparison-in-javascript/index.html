@@ -151,6 +151,44 @@ Js 會想辦法把兩邊 變成同樣的型別來做比較</p>
 重新獲得的知識<br>
 只能說以前的自己其實也沒有很理解 js<br>
 希望自己可以越來越好</p>
+<hr>
+<h3>後記</h3>
+<p>我又發現了一些之前沒有記錄到的東西<br>
+例如</p>
+<pre class="grvsc-container dark-default-dark" data-language="js" data-index="2"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// (1)</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk8">&quot;&quot;</span><span class="mtk1"> == </span><span class="mtk4">false</span><span class="mtk1">; </span><span class="mtk3">// true!</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// (2)</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk4">null</span><span class="mtk1"> == </span><span class="mtk4">undefined</span><span class="mtk1">; </span><span class="mtk3">// true!</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// =&gt; 在mdn的說明啊，描述的部分 第二點</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// If one of the operands is null or undefined, the other must also be null or undefined to return true. Otherwise return false.</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// 所以這兩個的比較會是true</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// (3)</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">//  &gt; &lt;  &gt;= &lt;= 的狀況</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// null 轉變成數字 ： 0</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// undefined 轉成數字 ： NaN</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// 所以數字情況永遠是 false</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// (4) 融合上述提過的比較方式：</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// null vs 0 !?</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk4">null</span><span class="mtk1"> &gt; </span><span class="mtk7">0</span><span class="mtk1">;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk4">null</span><span class="mtk1"> &lt; </span><span class="mtk7">0</span><span class="mtk1">;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk4">null</span><span class="mtk1"> == </span><span class="mtk7">0</span><span class="mtk1">;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk4">null</span><span class="mtk1"> &gt;= </span><span class="mtk7">0</span><span class="mtk1">;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// 答案是:</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// false!</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// false!</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// false!</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">// true!!!!</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">/*</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">    因為在 &gt; &lt; 的比較中，會把兩個值轉變成數字型態來做比較(或者是文字的字典序做比較)</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">    所以前面兩個比較中， null 其實會被轉變成 0</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">    所以 大於小於都錯！ 而最後一個&gt;= 才是對</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">    而==比較，就是上面的邏輯 另一個運算元也要是 null或者undefined 才會true</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">    -&gt; false</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">/*</span></span></span></code></pre>
 <p>以上是今天的分享 👋</p>
 <style class="grvsc-styles">
   .grvsc-container {
@@ -254,4 +292,4 @@ Js 會想辦法把兩邊 變成同樣的型別來做比較</p>
     background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
     box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
   }
-</style></div><div class="post-comments"><div></div></div></div> <!-- --><div class="Background__BackgroundLayout-sc-k04fyz-0 bPNHLe"><canvas id="canvas"></canvas></div></div></div><!--/$--></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/zh/blog/equality-comparison-in-javascript";window.___webpackCompilationHash="d7c945070e4720f20bee";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-257d5246b79bc8b7e1cf.js"],"app":["/app-e22b4b9a3303ec24fcf6.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-8762159f06e220d4c376.js"],"component---src-pages-blog-tsx":["/component---src-pages-blog-tsx-ad062fbc7613a7280964.js"],"component---src-pages-change-log-tsx":["/component---src-pages-change-log-tsx-5850fa75e73b056d60c0.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-71f5f4cd1e67ad89a691.js"],"component---src-pages-project-tsx":["/component---src-pages-project-tsx-56677aeaed52feacf44f.js"],"component---src-templates-blog-index-tsx":["/component---src-templates-blog-index-tsx-dc99d7dc34d921e3a989.js"]};/*]]>*/</script><script src="/polyfill-257d5246b79bc8b7e1cf.js" nomodule=""></script><script src="/app-e22b4b9a3303ec24fcf6.js" async=""></script><script src="/252f366e-7c949a357c764d5e5053.js" async=""></script><script src="/76d8c668-fca7b5c41e560b3dac3b.js" async=""></script><script src="/framework-79ea9e3d1f4a7909a4cf.js" async=""></script><script src="/webpack-runtime-59dcc258b4edc9b2e90b.js" async=""></script></body></html>
+</style></div><div class="post-comments"><div></div></div></div> <!-- --><div class="Background__BackgroundLayout-sc-k04fyz-0 bPNHLe"><canvas id="canvas"></canvas></div></div></div><!--/$--></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/zh/blog/equality-comparison-in-javascript";window.___webpackCompilationHash="fd22d00ae8473b35ba98";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-257d5246b79bc8b7e1cf.js"],"app":["/app-c851769155e23540dcb7.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-8762159f06e220d4c376.js"],"component---src-pages-blog-tsx":["/component---src-pages-blog-tsx-ad062fbc7613a7280964.js"],"component---src-pages-change-log-tsx":["/component---src-pages-change-log-tsx-5850fa75e73b056d60c0.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-71f5f4cd1e67ad89a691.js"],"component---src-pages-project-tsx":["/component---src-pages-project-tsx-56677aeaed52feacf44f.js"],"component---src-templates-blog-index-tsx":["/component---src-templates-blog-index-tsx-dc99d7dc34d921e3a989.js"]};/*]]>*/</script><script src="/polyfill-257d5246b79bc8b7e1cf.js" nomodule=""></script><script src="/app-c851769155e23540dcb7.js" async=""></script><script src="/252f366e-7c949a357c764d5e5053.js" async=""></script><script src="/76d8c668-fca7b5c41e560b3dac3b.js" async=""></script><script src="/framework-79ea9e3d1f4a7909a4cf.js" async=""></script><script src="/webpack-runtime-59dcc258b4edc9b2e90b.js" async=""></script></body></html>
